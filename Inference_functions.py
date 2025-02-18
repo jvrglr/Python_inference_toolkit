@@ -1,6 +1,7 @@
 def learn_dif(xs,ts,th=1,N=100):
     """
     Learn diffusion function for time series {ts,xs} using quadratic variation estimator.
+    The function assumes constant binning (grid) in temporal data.
     N-> number of bins
     th-> minimum number of counts per bin to do calculation
     """
@@ -26,6 +27,7 @@ def learn_dif(xs,ts,th=1,N=100):
 def learn_drift(xs,ts,th=1,N=100):
     """
     Learn drift function for time series {ts,xs} using firt moment of the jump
+    The function assumes constant binning (grid) in temporal data.
     N-> number of bins
     th-> minimum number of counts per bin to do calculation
     """
